@@ -1,0 +1,93 @@
+Processing esp32dev (platform: espressif32; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (6.13.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b 
+ - tool-esptoolpy @ 2.41100.0 (4.11.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 46 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- ESP32Servo @ 3.2.1
+|-- ArduinoJson @ 7.4.3
+|-- FireControl
+|-- FlameServoScanner
+|-- MapMemory
+|-- MotorControl
+|-- Navigation
+|-- RobotConfig
+|-- SensorManager
+|-- WebControl
+|-- WifiMapServer
+|-- EEPROM @ 2.0.0
+Building in release mode
+Linking .pio\build\esp32dev\firmware.elf
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN12_GLOBAL__N_118markCurrentVisitedEv+0xc): undefined reference to `MapMemory::set(short, short, CellType)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN12_GLOBAL__N_115cellIsUncoveredE7Heading+0x4): undefined reference to `MapMemory::isBlocked(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN12_GLOBAL__N_121chooseCoverageHeadingEv+0x8): undefined reference to `MapMemory::get(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN12_GLOBAL__N_117handleSA2ObstacleEt+0x28): undefined reference to `MapMemory::markObstacleAhead(Pose const&, unsigned short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN10Navigation6updateEv+0x44): undefined reference to `MapMemory::rotateBack(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN10Navigation6updateEv+0x64): undefined reference to `MapMemory::updatePoseForward(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN10Navigation6updateEv+0x68): undefined reference to `MapMemory::rotateLeft(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o):(.literal._ZN10Navigation6updateEv+0x6c): undefined reference to `MapMemory::rotateRight(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `(anonymous namespace)::markCurrentVisited()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:267: undefined reference to `MapMemory::set(short, short, CellType)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `(anonymous namespace)::cellIsUncovered(Heading)':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:242: undefined reference to `MapMemory::isBlocked(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `(anonymous namespace)::chooseCoverageHeading()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:254: undefined reference to `MapMemory::isBlocked(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `freeCorridorLength':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:255: undefined reference to `MapMemory::get(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `(anonymous namespace)::chooseCoverageHeading()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:318: undefined reference to `MapMemory::isBlocked(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `(anonymous namespace)::handleSA2Obstacle(unsigned short)':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:129: undefined reference to `MapMemory::markObstacleAhead(Pose const&, unsigned short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:602: undefined reference to `MapMemory::set(short, short, CellType)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `Navigation::begin()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:705: undefined reference to `MapMemory::isLoaded()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `Navigation::update()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:904: undefined reference to `MapMemory::isLoaded()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:798: undefined reference to `MapMemory::rotateBack(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:826: undefined reference to `MapMemory::isBlocked(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:827: undefined reference to `MapMemory::updatePoseForward(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:838: undefined reference to `MapMemory::save()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:852: undefined reference to `MapMemory::get(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:856: undefined reference to `MapMemory::isBlocked(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:496: undefined reference to `MapMemory::rotateLeft(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `finishMotion':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:497: undefined reference to `MapMemory::rotateRight(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:499: undefined reference to `MapMemory::rotateBack(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:500: undefined reference to `MapMemory::updatePoseForward(Pose&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:467: undefined reference to `MapMemory::save()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:492: undefined reference to `MapMemory::set(short, short, CellType)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libd3b\libNavigation.a(Navigation.cpp.o): in function `Navigation::update()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/Navigation/Navigation.cpp:662: undefined reference to `MapMemory::isBlocked(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\lib4e0\libWifiMapServer.a(WifiMapServer.cpp.o): in function `(anonymous namespace)::sendMap()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/WifiMapServer/WifiMapServer.cpp:86: undefined reference to `MapMemory::get(short, short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libad5\libScanMapper.a(ScanMapper.cpp.o):(.literal._ZN10ScanMapper10addReadingERK4Posefthhb+0x14): undefined reference to `MapMemory::markRayAngle(short, short, float, unsigned short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libad5\libScanMapper.a(ScanMapper.cpp.o):(.literal._ZN10ScanMapper11finishSweepERK4Poseh+0x8): undefined reference to `MapMemory::print(Pose const&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libad5\libScanMapper.a(ScanMapper.cpp.o): in function `ScanMapper::addReading(Pose const&, float, unsigned short, unsigned char, unsigned char, bool)':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/ScanMapper/ScanMapper.cpp:68: undefined reference to `MapMemory::markRayAngle(short, short, float, unsigned short)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\libad5\libScanMapper.a(ScanMapper.cpp.o): in function `ScanMapper::finishSweep(Pose const&, unsigned char)':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/lib/ScanMapper/ScanMapper.cpp:96: undefined reference to `MapMemory::print(Pose const&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\src\main.cpp.o:(.literal._Z7TaskMapPv+0x10): undefined reference to `MapMemory::dirty()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\src\main.cpp.o:(.literal._Z7TaskMapPv+0x14): undefined reference to `MapMemory::save()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\src\main.cpp.o:(.literal._Z7TaskMapPv+0x18): undefined reference to `MapMemory::print(Pose const&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\src\main.cpp.o:(.literal._Z5setupv+0x74): undefined reference to `MapMemory::begin()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\src\main.cpp.o:(.literal._Z5setupv+0x7c): undefined reference to `MapMemory::isLoaded()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\src\main.cpp.o: in function `TaskMap(void*)':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/src/main.cpp:63: undefined reference to `MapMemory::dirty()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/src/main.cpp:64: undefined reference to `MapMemory::save()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/src/main.cpp:68: undefined reference to `MapMemory::print(Pose const&)'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: .pio\build\esp32dev\src\main.cpp.o: in function `setup()':
+D:\Project_Fire\FireRobot_PlatformIO_Modular/src/main.cpp:85: undefined reference to `MapMemory::begin()'
+c:/users/admin/.platformio/packages/toolchain-xtensa-esp32/bin/../lib/gcc/xtensa-esp32-elf/8.4.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:\Project_Fire\FireRobot_PlatformIO_Modular/src/main.cpp:96: undefined reference to `MapMemory::isLoaded()'
+collect2.exe: error: ld returned 1 exit status
+*** [.pio\build\esp32dev\firmware.elf] Error 1
+========================= [FAILED] Took 16.80 seconds =========================
